@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<link href="css/lightbox.css" rel="stylesheet">
+		<style>
+			a{
+				text-decoration: none;
+				color: steelblue;
+			}
+			a:hover{
+				text-decoration: none;
+				color: red;
+			}
+		</style>
+		<!-- jQuery import -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/lightbox.js"></script>
+	</head>
+	<body>
+		<div style="width:100%; text-align:center; font-size:30px;padding-top:20px;">
+			<h1>LightBox Library Testing</h1>
+			<a href="images/panamera.jpg" data-lightbox="car" data-title="Panamera">Panamera</a><br>
+			<a href="images/v90.jpg" data-lightbox="car" data-title="v90">V90</a><br>
+			<a href="images/discovery.jpg" data-lightbox="car" data-title="discovery">Discovery</a>
+			<br><br>
+			<a href="images/panamera.jpg" data-lightbox="car2" data-title="Panamera">Car Gallery</a><br>
+			<a href="images/v90.jpg" data-lightbox="car2" data-title="v90"></a><br>
+			<a href="images/discovery.jpg" data-lightbox="car2" data-title="discovery"></a>
+
+		</div>
+		<script>
+			lightbox.option({
+				'resizeDuration':200,
+				'wrapAround': true
+			});
+		</script>
+	</body>
+</html>
