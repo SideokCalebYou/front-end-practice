@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Title of Page</title>
+		<style>
+
+			#message1{
+				background-color: yellow;
+				width: 300px;
+				height: 200px;
+			}
+			#message2{
+				background-color: blue;
+				width: 300px;
+				height: 200px;
+			}
+		</style>
+		<!-- jQuery import -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>JavaScript VS. jQuery</h1>
+
+		<p>JavaScript Style</p>
+		<div id="message1" onclick="clicked();">
+			Click me!
+		</div>
+
+		<p>jQuery Style</p>
+		<div id="message2">
+			Click me!
+		</div>
+
+	<script>
+		function clicked(){
+			document.getElementById('message1').innerHTML = "Clicked!<br>Event is handled by JavaScript";
+			document.getElementById('message1').style.backgroundColor = 'red';
+		}
+
+		$(document).ready(function(){
+			$("#message2").click(function(){
+				$("#message2").css("background-color", "green");
+				$("#message2").html("Clicked!<br>Event is handled by jQuery");
+				//$("#message2").text("Clicked!<br>Event is handled by jQuery");
+				//Above will be considered as 'text' although it uses html tag which is <br> tag
+			});
+		});
+
+		
+	</script>
+	</body>
+
+</html>
